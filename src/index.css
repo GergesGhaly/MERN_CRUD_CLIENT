@@ -1,13 +1,89 @@
-body {
+*{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+img {
+  width: 100%;
+  object-fit: cover;
 }
+
+.logo{
+  padding: 25px 15px;
+  font-size: 20px;
+  font-weight: 900;
+
+}
+.logo span:nth-child(4) {
+color:  rgb(230, 69, 69);
+}
+.logo span:nth-child(3) {
+  color:rgb(206, 209, 8)
+  }
+  .logo span:nth-child(2) {
+    color:lightgreen
+    }
+    .logo span:nth-child(1) {
+      color:rgb(8, 152, 209)
+      }
+  
+form{
+  background-image:url(https://images.pexels.com/photos/1266808/pexels-photo-1266808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+padding: 50px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+form input{
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  outline: none;
+  border:none;
+  font-size: 20px;
+  width: 70%;
+
+}
+.hero{
+display: flex;
+justify-content: space-around;
+align-items: center;
+padding: 15px 10px;
+}
+.hero h2{
+  padding: 5px 0;
+  font-weight: 500;
+  font-size: 20px;
+  color: rgb(65, 64, 64);
+}
+.hero .name{
+  text-transform: capitalize;
+}
+.btns{
+  display: flex;
+
+}
+.btns button{
+padding: 12px 12px ;
+outline: none;
+border:none;
+background-color: rgb(206, 209, 8);
+
+}
+.btns button:nth-child(2){
+  background-color: rgb(230, 69, 69);
+  color: aliceblue;
+  }
+
+  @media only screen and (max-width : 700px ){
+    form input{
+      width: 100%;
+    
+    }
+    
+  }  

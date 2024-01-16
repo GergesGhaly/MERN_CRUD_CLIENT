@@ -10,7 +10,7 @@ const Header = () => {
   const [userId, setUserId] = useState("");
   // const { user, Logout } = useContext(AuthContext);
   const Logout = () => {
-    axios.post(`${process.env.API}/auth/logout`);
+    axios.post(`${process.env.REACT_APP_API}/auth/logout`);
     removeCookie("userToken");
     localStorage.removeItem("userName");
     nvigate("/");

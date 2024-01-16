@@ -24,7 +24,7 @@ const Register = () => {
     setLoad(true);
 
     axios
-      .post(`${process.env.API}/auth/register`, userData)
+      .post(`${process.env.REACT_APP_API}/auth/register`, userData)
       .then((res) => {
         setUserData(res.data.userName);
         setCookie("userToken", res.data.userToken);

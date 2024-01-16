@@ -5,6 +5,7 @@ import Header from "./Header";
 import { useCookies } from "react-cookie";
 
 const Login = () => {
+
   const nvigate = useNavigate();
   const [Cookie, setCookie] = useCookies("");
   const [laod, setLoad] = useState(false);
@@ -22,7 +23,7 @@ const Login = () => {
     e.preventDefault();
     setLoad(true);
     axios
-      .post(`${process.env.API}/auth/login`, userData)
+      .post(`${process.env.REACT_APP_API}/auth/login`, userData)
       .then((res) => {
         setUserData(res.data.userName);
         localStorage.setItem("userName", res.data.userName);

@@ -1,4 +1,4 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -8,82 +8,98 @@ img {
   width: 100%;
   object-fit: cover;
 }
-
-.logo{
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 15px;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  color: rgb(117, 117, 117);
+}
+.right-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+/* .logo {
   padding: 25px 15px;
   font-size: 20px;
   font-weight: 900;
+  text-align: center;
+  color: rgb(117, 117, 117);
+  font-weight: bolder;
+} */
 
-}
-.logo span:nth-child(4) {
-color:  rgb(230, 69, 69);
-}
-.logo span:nth-child(3) {
-  color:rgb(206, 209, 8)
-  }
-  .logo span:nth-child(2) {
-    color:lightgreen
-    }
-    .logo span:nth-child(1) {
-      color:rgb(8, 152, 209)
-      }
-  
-form{
-  background-image:url(https://images.pexels.com/photos/1266808/pexels-photo-1266808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) ;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-padding: 50px;
+form {
+  padding: 50px;
   margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-form input{
+form input {
   background-color: rgb(255, 255, 255);
   padding: 20px;
   outline: none;
-  border:none;
+  border: none;
   font-size: 20px;
   width: 70%;
-
+  border-bottom: 1px solid rgb(126, 126, 126);
 }
-.hero{
-display: flex;
-justify-content: space-around;
-align-items: center;
-padding: 15px 10px;
+.submit {
+  cursor: pointer;
+  border: none;
+  margin-top: 0px;
 }
-.hero h2{
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+}
+.hero h2 {
   padding: 5px 0;
   font-weight: 500;
   font-size: 20px;
   color: rgb(65, 64, 64);
 }
-.hero .name{
+.hero .name {
   text-transform: capitalize;
 }
-.btns{
+.btns {
   display: flex;
-
 }
-.btns button{
-padding: 12px 12px ;
-outline: none;
-border:none;
-background-color: rgb(206, 209, 8);
-
+.btns button {
+  padding: 12px 12px;
+  outline: none;
+  border: none;
+  background-color: rgb(206, 209, 8);
 }
-.btns button:nth-child(2){
+.btns button:nth-child(2) {
   background-color: rgb(230, 69, 69);
   color: aliceblue;
-  }
+}
 
-  @media only screen and (max-width : 700px ){
-    form input{
-      width: 100%;
-    
-    }
-    
-  }  
+@media only screen and (max-width: 700px) {
+  form input {
+    width: 100%;
+  }
+}
+
+.loginPage,
+.registerPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.loginPage form,
+.registerPage form {
+  width: 400px;
+}
+.loginPage form input,
+.registerPage form input {
+  width: 100%;
+}

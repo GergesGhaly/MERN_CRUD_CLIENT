@@ -1,8 +1,8 @@
 {
   "posts": [
     {
-      "title": "gerges ghaly bebawy",
-      "desc": "27",
+      "name": "gerges ghaly bebawy",
+      "age": "27",
       "id": 1
     }
   ]

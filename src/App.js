@@ -63,7 +63,7 @@ function App() {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`${process.env.REACT_APP_API}/users/deleteuser/${id}`)
+          .delete(`${process.env.REACT_APP_API}/users/deleteuser/${id}`, userId)
           .then((fetch) => dataFetch())
           .then(() => setsendData({ name: "", age: "" }));
         setUpdatmod(false);

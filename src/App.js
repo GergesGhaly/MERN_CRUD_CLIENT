@@ -108,12 +108,22 @@ function App() {
         });
       }
     } else {
-      axios
-        .put(`${process.env.REACT_APP_API}/users/updateuser/${id}`, sendData)
-        .then((fetch) => dataFetch())
-        .then(() => setsendData({ name: "", age: "" }));
+      if (name && age) {
+        axios
+          .put(`${process.env.REACT_APP_API}/users/updateuser/${id}`, sendData)
+          .then((fetch) => dataFetch())
+          .then(() => setsendData({ name: "", age: "" }));
 
-      setUpdatmod(false);
+        setUpdatmod(false);
+      } else {
+        const MySwal = withReactContent(Swal);
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Name or Age is empty!",
+          timer: 1500,
+        });
+      }
     }
   };
   return (

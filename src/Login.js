@@ -5,7 +5,6 @@ import Header from "./Header";
 import { useCookies } from "react-cookie";
 
 const Login = () => {
-
   const nvigate = useNavigate();
   const [Cookie, setCookie] = useCookies("");
   const [laod, setLoad] = useState(false);
@@ -64,18 +63,14 @@ const Login = () => {
         </span>
 
         <input
+          disabled={laod}
           className="submit"
           style={{
             background: "lightgreen",
           }}
           type="submit"
-          value="Login"
+          value={laod ? "Loading ..." : "Login"}
         />
-        {laod && (
-          <span style={{ padding: "13px 0", fontSize: "12px" }}>
-            Loading ..
-          </span>
-        )}
         {err && (
           <span style={{ padding: "13px 0", fontSize: "12px", color: "red" }}>
             {err}

@@ -64,19 +64,14 @@ const Register = () => {
         </span>
 
         <input
+          disabled={laod}
           className="submit"
           style={{
             background: "lightgreen",
           }}
           type="submit"
-          value="Register"
+          value={laod ? "Loading ..." : "Register"}
         />
-        {laod && (
-          <span style={{ padding: "13px 0", fontSize: "12px" }}>
-            Loading ..
-          </span>
-        )}
-
         {err && (
           <span style={{ padding: "13px 0", fontSize: "12px", color: "red" }}>
             {err}

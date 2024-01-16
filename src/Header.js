@@ -10,7 +10,7 @@ const Header = () => {
   const [userId, setUserId] = useState("");
   // const { user, Logout } = useContext(AuthContext);
   const Logout = () => {
-    axios.post(`https://api-uhts.onrender.com/auth/logout`);
+    axios.post(`${process.env.API}/auth/logout`);
     removeCookie("userToken");
     localStorage.removeItem("userName");
     nvigate("/");
@@ -20,7 +20,6 @@ const Header = () => {
     setName(localStorage.getItem("userName"));
     setUserId(localStorage.getItem("userId"));
   }, [name, userId]);
-
 
   return (
     <div className="header">

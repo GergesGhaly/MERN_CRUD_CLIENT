@@ -24,7 +24,7 @@ const Register = () => {
     setLoad(true);
 
     axios
-      .post(`https://api-uhts.onrender.com/auth/register`, userData)
+      .post(`${process.env.API}/auth/register`, userData)
       .then((res) => {
         setUserData(res.data.userName);
         setCookie("userToken", res.data.userToken);

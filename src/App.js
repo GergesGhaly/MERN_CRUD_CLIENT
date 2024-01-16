@@ -29,7 +29,7 @@ function App() {
   };
   const dataFetch = () => {
     setLoad(true);
-    fetch(`https://api-uhts.onrender.com/users/getdata`)
+    fetch(`${process.env.API}/users/getdata`)
       .then((res) => res.json())
       .then((dataF) => setdata(dataF))
       .then(() => setLoad(false));
@@ -63,7 +63,7 @@ function App() {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`https://api-uhts.onrender.com/users/deleteuser/${id}`)
+          .delete(`${process.env.API}/users/deleteuser/${id}`)
           .then((fetch) => dataFetch())
           .then(() => setsendData({ name: "", age: "" }));
         setUpdatmod(false);
@@ -82,7 +82,7 @@ function App() {
     if (!updatmod) {
       if (name && age) {
         axios
-          .post(`https://api-uhts.onrender.com/users/createuser`, {
+          .post(`${process.env.API}/users/createuser`, {
             name,
             age,
             userAuthId: userId,
@@ -109,7 +109,7 @@ function App() {
       }
     } else {
       axios
-        .put(`https://api-uhts.onrender.com/users/updateuser/${id}`, sendData)
+        .put(`${process.env.API}/users/updateuser/${id}`, sendData)
         .then((fetch) => dataFetch())
         .then(() => setsendData({ name: "", age: "" }));
 

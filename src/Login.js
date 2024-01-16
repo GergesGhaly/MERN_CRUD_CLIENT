@@ -22,7 +22,7 @@ const Login = () => {
     e.preventDefault();
     setLoad(true);
     axios
-      .post(`https://api-uhts.onrender.com/auth/login`, userData)
+      .post(`${process.env.API}/auth/login`, userData)
       .then((res) => {
         setUserData(res.data.userName);
         localStorage.setItem("userName", res.data.userName);
